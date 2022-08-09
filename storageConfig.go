@@ -135,7 +135,8 @@ func NewStreamCore() *StorageST {
 							newChannels.URL = url.Value
 							newChannels.OnDemand = true
 							newChannels.Debug = false
-							// newChannels.Status = 1
+							newChannels.Status = 0
+							newChannels.Audio = false
 							newStream.Channels[url.Type] = newChannels
 						}
 					}
