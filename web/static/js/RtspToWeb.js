@@ -138,7 +138,7 @@ var rtspPlayer={
     });
   },
   playMse:function(){
-    //console.log(this.streamPlayUrl('mse'));
+    console.log(this.streamPlayUrl('mse'));
     var _this=this;
     this.mse = new MediaSource();
     $("#videoPlayer")[0].src=window.URL.createObjectURL(this.mse);
@@ -204,6 +204,7 @@ var rtspPlayer={
         if (location.protocol == 'https:') {
           potocol = 'wss';
         }
+        console.log(potocol+'://'+location.host+'/stream/' + this.uuid +'/mse?uuid='+this.uuid);
         return potocol+'://'+location.host+'/stream/' + this.uuid +'/mse?uuid='+this.uuid;
         //return 'ws://sr4.ipeye.ru/ws/mp4/live?name=d4ee855e40874ef7b7149357a42f18f0';
         break;
